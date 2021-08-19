@@ -17,12 +17,12 @@ namespace AspnetCoreWithBugs.Controllers
         {
             _context = context;
         }
-
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Product.ToListAsync());
         }
-
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
@@ -38,7 +38,7 @@ namespace AspnetCoreWithBugs.Controllers
             }
             return View(product);
         }
-
+        [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
             var product = await _context.Product.FindAsync(id);
@@ -61,7 +61,7 @@ namespace AspnetCoreWithBugs.Controllers
             }
             return View(product);
         }
-
+        [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
             var product = await _context.Product
