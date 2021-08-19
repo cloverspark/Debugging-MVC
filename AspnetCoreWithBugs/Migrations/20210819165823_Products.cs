@@ -2,7 +2,7 @@
 
 namespace AspnetCoreWithBugs.Migrations
 {
-    public partial class Intial : Migration
+    public partial class Products : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
